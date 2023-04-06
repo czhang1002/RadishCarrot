@@ -1,0 +1,209 @@
+    h1{
+        margin: 0;
+        margin-left: 10px;
+        line-height: 53px;
+        font-family: Comic Sans MS;
+        font-weight: bold;
+    }
+    .body{
+        margin: 0;
+    }
+
+/* SideBar Style */
+    .sidebar_left{
+        background-color: white;
+        position: fixed;
+        top: 80px;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        width: 80px;
+        border-right: 1px solid gray;
+    }
+    .sidebar_link{
+        height: 80px;
+        cursor: pointer;
+    }
+    .sidebar_link:hover{
+        background-color: lightgrey;
+    }
+    .sidebar_right{
+        background-color: white;
+        position: fixed;
+        top: 80px;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+        width: 80px;
+        border-left: 1px solid gray;
+    }
+
+/* Header Sytle */
+    .header{
+        background-color: white;
+        height: 80px;
+        display: flex;
+        flex-direction: row; 
+        justify-content: space-between;   
+        align-items: center;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1;
+        border-bottom: 1px solid gray;
+    }
+/* Left Header Sytle */
+    .header_left{
+        display: grid;
+        grid-template-columns: 60px 300px;
+        margin-left: 10px;
+    }
+    .header_picture{
+        height: 50px;
+        display: inline;
+        border: solid gray; 
+        border-radius: 50px;
+    }
+/* Middle Header Sytle */
+    .header_middle{
+        flex: 1;
+        max-width: 500px;
+        display: flex;
+        align-items: center;
+    }
+    .input{
+        flex: 1;
+        height: 30px;
+        width: 0;
+        border: solid gray; 
+        border-radius: 20px;
+        padding-left: 15px;
+        font-size: 15px;
+        box-shadow: inset 1px 2px 3px rgba(0,0,0,0.15);
+        margin-right: 10px;
+    }
+    .input::placeholder{
+        font-family: Comic Sans MS;
+        font-size: 15px;
+    }
+    .search{
+        background-color: white;
+        height: 40px;
+        width: 40px;
+        border: solid gray;
+        border-radius: 50px;
+        cursor: pointer;
+        position: relative;
+    }
+    .search .tooltip,
+    .QQ_tooltip .tooltip,
+    .email_tooltip .tooltip{
+        position: absolute;
+        background-color: gray;
+        color: white;
+        font-size: 12px;
+        text-align: center;
+        padding: 5px;
+        border-radius: 4px;
+        bottom: -30px;
+        left: -10px;
+        right: -10px;
+        opacity: 0;
+        transition: opacity 0.5s;
+        pointer-events: none;
+        z-index: 1;
+    }
+    .search:hover .tooltip,
+    .QQ_tooltip:hover .tooltip,
+    .email_tooltip:hover .tooltip{
+        opacity: 1;
+    }
+    .search:hover{
+        background-color: rgb(237, 235, 235);
+    }
+    .search:active{
+        background-color: rgb(215, 211, 211);
+    }
+
+/* Right Header Sytle */
+    .header_right{
+        width: 300px;
+        text-align: right;
+        margin-right: 10px;
+        flex-shrink: 0;
+    }
+    .email{
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        cursor: pointer;
+    }
+    .QQ{
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        cursor: pointer;
+    }
+    .email_tooltip{
+        position: relative;    
+    }
+    .QQ_tooltip{
+        position: relative;
+    }
+    .icon{
+        width: 20px;
+        border-radius: 50px;
+        vertical-align: middle;
+    }  
+    p{
+        font-family: Comic Sans MS;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+/* Main Style */
+    .grid_of_ALL{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 35px;
+        row-gap: 40px;
+        padding-left: 105px;
+        padding-right: 105px;
+    }
+    @media (max-width: 1000px){
+        .grid_of_ALL{
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    .picture{
+        margin-bottom: 12px;
+        text-align: center;
+    }
+    .image{
+        width: 300px;
+        height: 350px;
+        object-fit: cover;
+        border: 5px solid gray;
+    }
+    .grid_for_infor{
+        display: grid;
+        grid-template-columns: 50px 1fr;
+    }
+    .profile{
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+        border-radius: 50px;
+    }
+    .sentences{
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+        margin-bottom: 15px;
+    }
+    .name,
+    .date{
+        font-size: 10px;
+        color: gray;
+    }
